@@ -13,6 +13,24 @@
   <title>Vue To Do list</title>
 </head>
 <body>
+
+  <div id="app">
+    <h1>ToDo List</h1>
+    <input type="text" v-model.trim="newTodo" placeholder="nuovo todo" @keyup.enter="addTodo()">
+    <button @click="addTodo()">Aggiungi</button>
+
+    <div class="todo-container">
+      <h2 v-if="todoList.length === 0">Non ci sono ToDo</h2>
+
+      <ul v-else>
+        <li v-for="(todo, index) in todoList"> 
+          <h3 @click="todo.done = !todo.done" :class="{'txt-line-through' : todo.done}">{{todo.text}}</h3> 
+          <i class="fa-solid fa-xmark" @click="removeTodo(index)"></i>
+        </li>
+      </ul>
+
+    </div>
+  </div>
   
 
   <script src="js/script.js"></script>

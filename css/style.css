@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+ul li h3{
+  cursor: pointer;
+}
+
+#app{
+  text-align: center;
+}
+
+#app input{
+  margin: 10px 5px;
+  padding: 5px;
+}
+
+#app button{
+  padding: 5px;
+}
+
+.todo-container{
+  width: 70vw;
+  background-color: #e9e7e7;
+  margin: 0 auto;
+  text-align: start;
+  padding: 20px;
+}
+
+.txt-line-through{
+  text-decoration: line-through;
+}
+
+i{
+  cursor: pointer;
+}
